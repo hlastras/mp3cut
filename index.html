@@ -23,6 +23,7 @@
             <div class="timestamp-group">
                 <label for="startTime">Inicio:</label>
                 <input type="text" id="startTime" value="0.0">
+                <button id="playStart" class="play-button">▶</button>
             </div>
             <div class="timestamp-group">
                 <label for="endTime">Fin:</label>
@@ -36,6 +37,11 @@
         </div>
         <button id="cutButton" disabled>Cortar</button>
     </div>
+
+    <div id="overlay" class="hidden">
+        <div id="overlayContent">Procesando...</div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
