@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Cortar MP3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.0/lame.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Corta tu MP3</h1>
+        <div class="upload-container">
+            <input type="file" id="fileInput" accept="audio/mp3">
+            <label for="fileInput" class="upload-label">Sube tu archivo MP3 o arrástralo aquí</label>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+        <div class="controls">
+            <button id="setStart">Establecer Inicio</button>
+            <button id="setEnd">Establecer Fin</button>
+        </div>
+        <div class="timestamps">
+            <div class="timestamp-group">
+                <label for="startTime">Inicio:</label>
+                <input type="text" id="startTime" value="0.0">
+            </div>
+            <div class="timestamp-group">
+                <label for="endTime">Fin:</label>
+                <input type="text" id="endTime" value="0.0">
+            </div>
+        </div>
+        <div class="progress-bar-container">
+            <div id="progressBar"></div>
+            <div id="cutStartIndicator"></div>
+            <div id="cutEndIndicator"></div>
+        </div>
+        <button id="cutButton" disabled>Cortar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
